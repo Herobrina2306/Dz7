@@ -14,7 +14,7 @@ int col = new Random().Next(4, 10);
 int[,] array = GetRandomArray(row, col, 0, 9);
 PrintArray(array);
 
-Console.WriteLine("Введите номер позиции элемента");
+Console.WriteLine("Введите номер позиции элемента через энтер:");
 int order1 = int.Parse(Console.ReadLine() ?? string.Empty);
 int order2 = int.Parse(Console.ReadLine() ?? string.Empty);
 
@@ -48,7 +48,7 @@ void PrintArray(int[,] inArray)
 void SequenceNumber(int[,] arrayNew, int a, int b )
 {
     if(a > arrayNew.GetLength(0) || b > arrayNew.GetLength(1))
-    Console.WriteLine($"{a}, {b} - > Такого числа в массиве нет.");
+    Console.WriteLine($"[{a}, {b}] - > Такого числа в массиве нет. В массиве всего {arrayNew.GetLength(0)} строк и {arrayNew.GetLength(1)} столбцов.");
     else
-    Console.WriteLine($"{a}, {b} -> {arrayNew[a,b]} ");
+    Console.WriteLine($"[{a}, {b}] -> {arrayNew[a,b]} ");
 }
